@@ -1,0 +1,24 @@
+#3.	Uma coleção T de números é definida recursivamente por:
+#2  T
+#Se X  T, então 	X+3  T 	e 	2*X  T 
+#Quais dos seguintes números pertencem a T? 6 , 7 , 19 , 12.
+#Faça um programa recursivo para demonstrar.
+
+def pertence_A_T(n):
+  if n == 2:
+      return True
+
+  if n > 2 and n % 2 == 1:
+      return pertence_A_T(n - 3)
+
+  if n > 2 and n % 2 == 0:
+      return pertence_A_T(n // 2)
+
+  return False
+
+numero = int(input("Coloque o número:"))
+
+if pertence_A_T(numero):
+  print(f"{numero} pertence a T")
+else:
+  print(f"{numero} não pertence a T")
