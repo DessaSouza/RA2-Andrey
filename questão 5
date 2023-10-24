@@ -1,0 +1,26 @@
+5.	Uma coleção S de cadeias de caracteres é definida recursivamente por: 
+a  S 	e 	b  S
+Se X  S, então 	Xb  S.
+
+Quais das seguintes cadeias pertencem a S? a , ab , aba , aaab , bbbbb
+Faça um programa recursivo para demonstrar.
+
+def pertence_a_S(string):
+  if string == "":
+      return True
+  elif string[0] == 'a':
+      return pertence_a_S(string[1:])
+  elif string[-1] == 'b':
+      return pertence_a_S(string[:-1])
+  else:
+      return False
+
+#Testando as cadeias
+cadeias = ["a", "ab", "aba", "aaab", "bbbbb"]
+
+for cadeia in cadeias:
+  if pertence_a_S(cadeia):
+      print(f"{cadeia} pertence a S.")
+  else:
+      print(f"{cadeia} NÃO pertence a S.")
+
