@@ -1,0 +1,20 @@
+def pertence_A_M(numero):
+    if numero == 2 or numero == 3:
+        return True
+    elif numero < 2:
+        return False
+    return verificar_Combinacoes(numero)
+
+def verificar_Combinacoes(numero):
+    for i in range(2, numero // 2 + 1):
+        if pertence_A_M(i) and pertence_A_M(numero - i):
+            return True
+    return False
+
+numeros = [6, 9, 16, 21, 26, 54, 72, 218]
+
+for numero in numeros:
+    if pertence_A_M(numero):
+        print(f'O número {numero} pertence a M.')
+    else:
+        print(f'O número {numero} não pertence a M.')
