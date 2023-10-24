@@ -1,0 +1,11 @@
+# Questão 8 B:
+
+def calcularS(n):
+    if n == 1:
+        return 2
+    else:
+        return (2*(n - 1) - 1) / calcularS(n - 1)
+
+n = 5 
+resultado = calcularS(n)
+print(f"S({n}) = {resultado}")
