@@ -1,0 +1,16 @@
+#Questão 9:
+F(n)-F(1)=2+3...+n-1+n
+
+def F(n):
+    return n * (n + 1) // 2
+
+def calcular_formula(n):
+    resultado = F(n) - F(1)
+    soma = sum(range(2, n + 1))
+    return resultado == soma
+
+n = 10 
+if calcular_formula(n): 
+    print(f'A fórmula é verdadeira para n = {n}')
+else:
+    print(f'A fórmula não é verdadeira para n = {n}')
