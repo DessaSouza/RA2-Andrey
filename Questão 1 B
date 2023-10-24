@@ -1,0 +1,13 @@
+#Questão 1 B:
+def A(n):
+  if n == 1:
+      return 2
+  elif n >= 2:
+      return calcularA(n)
+
+def calcularA(n):
+  return A(n - 1) - 1
+
+n = 5
+resultado = A(n)
+print(f"A({n}) = {resultado}")
