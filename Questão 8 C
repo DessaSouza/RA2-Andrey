@@ -1,0 +1,14 @@
+#Questão 8 C:
+def calcularS(a, b, n):
+  if n == 1:
+      return a
+  elif n == 2:
+      return b
+  else:
+      return a + (n - 2)
+
+a = 1
+b = 2 
+n = 5 
+resultado = calcularS(a, b, n)
+print(f"S({n}) = {resultado}")
