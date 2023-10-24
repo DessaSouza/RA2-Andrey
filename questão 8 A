@@ -1,0 +1,12 @@
+#Questão 8: Escreva o corpo da função recursiva para computar S(n) para uma dada seqüência S:
+
+     #A)
+def calcularS(n):
+    if n == 1:
+        return 1
+    else:
+        return 3 * calcularS(n - 1)
+
+n = 5
+resultado = calcularS(n)
+print(f"S({n}) = {resultado}")
