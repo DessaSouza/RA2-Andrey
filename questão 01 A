@@ -1,0 +1,21 @@
+# Questão 01: Escreva um algoritmo recursivo para cada uma     das alternativas.
+  # a) S(1) = 10
+  # S(n) = S(n – 1) + 10, para n  2
+
+def SequenciaS(n):
+    if n == 1:
+        return 10
+    else:
+        return SequenciaS(n - 1) + 10
+
+  # Teste 1: S(1)
+resultado01 = SequenciaS(1)
+print(f"S(1) = {resultado01}")
+
+  # Teste 2: S(5)
+resultado02 = SequenciaS(5)
+print(f"S(5) = {resultado02}")
+
+  # Teste 3: S(10)
+resultado03 = SequenciaS(10)
+print(f"S(10) = {resultado03}")
